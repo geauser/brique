@@ -1,5 +1,5 @@
 {
-  "name": "brique",
+  "name": "@geauser/brique",
   "private": true,
   "main": "./dist/brique.umd.js",
   "module": "./dist/brique.es.js",
