@@ -16,7 +16,6 @@ withDefaults(defineProps<{
     inline-flex
     items-center
     border
-    font-medium
     shadow-sm
     rounded
     active:shadow-none
