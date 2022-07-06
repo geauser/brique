@@ -1,10 +1,8 @@
 <script setup lang="ts">
 
-interface Props {
+withDefaults(defineProps<{
   loading?: boolean;
-}
-
-withDefaults(defineProps<Props>(), {
+}>(), {
   loading: false,
 })
 

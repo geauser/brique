@@ -5,16 +5,18 @@
     "module": "esnext",
     "moduleResolution": "node",
     "strict": true,
+    "outDir": "dist",
     "jsx": "preserve",
+    "declaration": true,
     "sourceMap": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "esModuleInterop": true,
     "lib": ["esnext", "dom"],
     "skipLibCheck": true,
-    "baseUrl": ".",
+    "baseUrl": "lib",
     "paths": {
-      "@/*": ["lib/*"]
+      "@/*": ["./*"]
     }
   },
   "include": ["lib/**/*.ts", "lib/**/*.d.ts", "lib/**/*.vue"],
