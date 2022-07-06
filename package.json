@@ -8,6 +8,9 @@
     ".": {
       "import": "./dist/brique.es.js",
       "require": "./dist/brique.umd.js"
+    },
+    "./css": {
+      "import": "./dist/style.css"
     }
   },
   "files": [
