@@ -1,6 +1,6 @@
 {
   "name": "@geauser/brique",
-  "private": true,
+  "version": "1.0.0",
   "main": "./dist/brique.umd.js",
   "module": "./dist/brique.es.js",
   "types": "./dist/index.d.ts",
@@ -16,7 +16,6 @@
   "files": [
     "dist"
   ],
-  "version": "0.0.0",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build && vue-tsc --emitDeclarationOnly",
