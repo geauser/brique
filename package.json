@@ -17,6 +17,7 @@
     "dist"
   ],
   "scripts": {
+    "prepublish": "yarn build",
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build && vue-tsc --emitDeclarationOnly && tsc-alias",
     "preview": "vite preview"
