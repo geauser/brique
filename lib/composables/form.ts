@@ -1,30 +1,33 @@
-import useVuelidate, { ValidationArgs } from "@vuelidate/core";
+import useVuelidate, { ValidationArgs, ExtractState } from "@vuelidate/core";
 import { reactive, ref } from "vue";
 
 
 /**
  * TODO
- * @param form Form data
+ * @param data Form data
  * @param rules Vuelidate rules
  * @returns 
  */
-function useForm<Form extends {[key in keyof Rules]: any}, Rules extends ValidationArgs>(form: Form, rules: Rules) {
+function useForm<T extends Record<string, unknown>, V extends ValidationArgs>(
+  data: T,
+  rules: V,
+) {
 
-  const state = reactive<Form>(form);
+  const form = reactive<T>(data);
   const loading = ref(false);
-  const v = useVuelidate<Rules>(rules, state);
+  const v = useVuelidate(rules, form as ExtractState<V>);
 
   function submitGuard(...args: any[]) {
     return args.reduce((a, b) => a && b) && !loading.value && !v.value.$invalid;
   }
 
   return {
-    form: state,
+    form,
     loading,
     submitGuard,
     v,
   };
-
 }
+
 
 export default useForm;
