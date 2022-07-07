@@ -25,11 +25,6 @@ const trailingIcon = computed(() => {
   }
 });
 
-
-// TODO FINISH INPUTTEXT
-// TODO FormGroup
-// TODO FormMessage
-// TODO Form composable for form validation
 </script>
 <template>
 
@@ -74,7 +69,6 @@ const trailingIcon = computed(() => {
           input
           block
           w-full
-          pr-10 pl-4
           text-sm
           border
           border-gray-300
@@ -89,7 +83,10 @@ const trailingIcon = computed(() => {
           disabled:shadow-none
           disabled:bg-gray-50
           disabled:text-gray-400"
-        :class="{ 'pl-10': icon || $slots['leading-icon'] }"
+        :class="[ 
+          icon || $slots['leading-icon'] ? 'pl-10' : 'pl-4',
+          trailingIcon || $slots['trailing-icon'] ? 'pr-10' : 'pr-4'
+        ]"
         v-bind="$attrs"
         :value="modelValue"
         :aria-invalid="error"
