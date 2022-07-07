@@ -1,6 +1,6 @@
 {
   "name": "@geauser/brique",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "main": "./dist/brique.umd.js",
   "module": "./dist/brique.es.js",
   "types": "./dist/index.d.ts",
