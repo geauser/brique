@@ -1,11 +1,6 @@
 import './index.scss';
 
-import Button from './components/Button';
-import Icon from './components/Icon';
-import InputText from './components/InputText';
-
-export { 
-  Button,
-  Icon,
-  InputText,
-};
+export { default as Button } from './components/Button';
+export { default as Icon } from './components/Icon';
+export { default as InputText } from './components/InputText';
+export { default as useForm } from './composables/form';
