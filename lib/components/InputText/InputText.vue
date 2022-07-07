@@ -93,7 +93,7 @@ const trailingIcon = computed(() => {
         v-bind="$attrs"
         :value="modelValue"
         :aria-invalid="error"
-        @input="emit('update:modelValue', $event.target.value)">
+        @input="emit('update:modelValue', ($event.target as HTMLInputElement).value)">
 
       <!-- Trailing icon used to show state of the input -->
       <div
